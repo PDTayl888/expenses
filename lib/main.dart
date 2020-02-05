@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './widgets/transaction_list.dart';
+
+import 'widgets/user_transaction.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,20 +16,6 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
-  final List<Transaction> transactions = [
-    Transaction(
-      id: 't1',
-      title: 'New Shoes',
-      amount: 69.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'New Car',
-      amount: 3000.99,
-      date: DateTime.now(),
-    ),
-  ];
   // String titleInput;
   // String amountInput;
   final titleController = TextEditingController();
@@ -53,38 +40,7 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
-          Card(
-            elevation: 5,
-            child: Container(
-              padding: EdgeInsets.all(10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  TextField(
-                    decoration: InputDecoration(labelText: 'Title'),
-                    controller: titleController,
-                    // onChanged: (val) {
-                    //   titleInput = val;
-                    // },
-                  ),
-                  TextField(
-                    decoration: InputDecoration(labelText: 'Amount'),
-                    controller: amountController,
-                    // onChanged: (val) => amountInput = val,
-                  ),
-                  FlatButton(
-                    child: Text('Add Transaction'),
-                    onPressed: () {
-                      print(titleController.text);
-                      print(amountController.text);
-                    },
-                    textColor: Colors.purple,
-                  )
-                ],
-              ),
-            ),
-          ),
-          TransactionList(),
+          UserTransactions(),
         ],
       ),
     );
