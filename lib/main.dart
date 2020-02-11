@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Duration(days: 7),
         ),
       );
-    });
+    }).toList();
   }
 
   void _addNewTransaction(String txTitle, double txAmount) {
