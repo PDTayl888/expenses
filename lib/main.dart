@@ -24,11 +24,12 @@ class MyApp extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
               ),
+              button: TextStyle(color: Colors.white),
             ),
         appBarTheme: AppBarTheme(
           textTheme: ThemeData.light().textTheme.copyWith(
                 title: TextStyle(
-                  fontFamily: 'Quicksand',
+                  fontFamily: 'OpenSans',
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),
